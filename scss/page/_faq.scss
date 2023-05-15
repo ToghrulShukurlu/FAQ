@@ -1,0 +1,155 @@
+main.faq {
+   display: flex;
+   align-items: center;
+   color: $clr-basic-700;
+   flex-direction: column;
+   gap: 100px;
+   padding-top: 24px;
+
+
+
+   .questions {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 70%;
+
+      .questions-title {
+         display: flex;
+         justify-content: center;
+         font-weight: 700;
+         font-size: 2rem;
+      }
+
+      .item {
+         display: flex;
+         padding: 25px;
+         border-bottom: 1px solid gray;
+         flex-direction: column;
+
+         .question {
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+
+         .question-content {
+            padding: 25px 25px 0 25px;
+         }
+
+         &.active {
+            .plus-icon {
+               transform: rotate(45deg);
+            }
+         }
+      }
+   }
+
+   .banner {
+      background-color: $clr-danger-400;
+      padding: 48px 64px;
+      border-radius: 20px;
+      color: #FFF;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+         content: "";
+         width: 305px;
+         height: 305px;
+         border-radius: 50%;
+         background-color: rgba($color: #fff, $alpha: 0.16);
+         position: absolute;
+         left: -2%;
+         bottom: -40%;
+         transform: translateY(50%);
+      }
+
+      &::before {
+         content: "";
+         width: 375px;
+         height: 375px;
+         border-radius: 50%;
+         background-color: rgba($color: #fff, $alpha: 0.08);
+         position: absolute;
+         left: -5%;
+         bottom: -10%;
+         transform: translateY(50%);
+
+      }
+
+      .buttons {
+         display: flex;
+         gap: 20px;
+         align-items: center;
+
+         button {
+            border: none;
+            padding: 16px 32px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            white-space: nowrap;
+         }
+
+         .now {
+            background-color: $clr-basic-800;
+            color: #FFF;
+
+
+         }
+      }
+
+
+
+      .banner-content {
+         display: flex;
+         flex-direction: column;
+         gap: 25px;
+         width: 70%;
+
+         h3 {
+            font-size: 3.2rem;
+            font-weight: 800;
+         }
+
+         p {
+            width: 58%;
+         }
+      }
+   }
+
+
+}
+
+
+@media (max-width:576px) {
+   main.faq {
+      justify-content: center;
+
+      .questions {
+         width: 100%;
+
+         .item {
+            .question {
+               p {
+                  width: 80%;
+               }
+            }
+         }
+      }
+
+      .banner {
+         display: none;
+      }
+
+   }
+
+
+
+}

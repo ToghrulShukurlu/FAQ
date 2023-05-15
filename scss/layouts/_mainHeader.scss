@@ -1,0 +1,118 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 112px;
+    border-bottom: 1px solid $clr-basic-300;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .hamburger {
+            display: none;
+            margin-right: 5px;
+            font-size: 1.3rem;
+        }
+
+        h1 {
+            white-space: nowrap;
+            color: $clr-basic-700;
+        }
+    }
+
+    .nav {
+        display: flex;
+
+        ul {
+            display: flex;
+            gap: 48px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: $clr-basic-700;
+                }
+
+                &.active {
+                    a {
+                        color: $clr-danger-500;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .search {
+            display: none;
+        }
+
+        button {
+            padding: 12px 26px;
+            border-radius: 8px;
+
+            &.buy {
+                background-color: $clr-danger-500;
+                border: none;
+                color: #FFFFFF;
+            }
+
+            &.demo {
+                border-radius: 8px
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:576px) {
+    header {
+        padding: 30px 20px;
+
+        .logo {
+            .hamburger {
+                display: inline;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .buttons {
+            .buy {
+                font-size: 1.05em;
+
+            }
+
+            .search {
+                display: inline;
+                font-size: 1.2rem
+            }
+
+            .demo {
+                display: none;
+            }
+
+            .hidden-mobile {
+                display: none;
+            }
+        }
+    }
+}

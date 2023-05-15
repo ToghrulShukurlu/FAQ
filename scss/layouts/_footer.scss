@@ -1,0 +1,54 @@
+.footer {
+    background-color: $clr-basic-300 ;
+    color: $clr-basic-700 ;
+    margin-top: 90px;
+    padding: 70px 112px 10px 112px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .logo-title {
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }
+
+        .column-title {
+            font-size: 1.5rem;
+            font-size: 500;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    @media (max-width:576px) {
+        .column {
+
+            ul {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+        }
+    }
+}
